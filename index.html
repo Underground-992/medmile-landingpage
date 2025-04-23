@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -8,15 +7,151 @@
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    body { font-family: 'Prompt', sans-serif; }
+    body {
+      font-family: 'Prompt', sans-serif;
+    }
     .medmile-green { color: #8cdb9c; }
     .medmile-blue { color: #003b71; }
     .bg-medmile-blue { background-color: #003b71; }
     .hover\:bg-medmile-blue-dark:hover { background-color: #002d55; }
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .slider-track {
+      animation: slide 20s linear infinite;
+    }
+      @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
   </style>
 </head>
-<body>
-  <h1 class="text-4xl font-bold text-center mt-10 text-medmile-blue">MedMile Landingpage – Vorschau</h1>
-  <p class="text-center mt-4">Diese Datei ist ein Platzhalter. Bitte nutze die vollständige HTML aus dem Canvas für dein Projekt.</p>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <img src="/mnt/data/colored.png" alt="MedMile Logo" class="h-10">
+      <nav class="space-x-6">
+        <a href="#kurse" class="text-gray-700 hover:text-medmile-blue">Kurse</a>
+        <a href="#preise" class="text-gray-700 hover:text-medmile-blue">Preise</a>
+        <a href="#referenten" class="text-gray-700 hover:text-medmile-blue">Referent*innen</a>
+        <a href="#faq" class="text-gray-700 hover:text-medmile-blue">FAQ</a>
+        <a href="#" class="text-medmile-blue font-semibold">Login</a>
+        <a href="#cta" class="bg-medmile-blue text-white px-4 py-2 rounded-lg hover:bg-medmile-blue-dark">Jetzt registrieren</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-blue-50 py-20 text-center" id="cta">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold mb-4 text-medmile-blue">Flexibel fortbilden. CME-Punkte sammeln.</h2>
+      <p class="text-xl mb-6">Ihre medizinische Weiterbildung – wann und wo Sie möchten.</p>
+      <a href="#" class="bg-medmile-blue text-white px-6 py-3 rounded-lg text-lg hover:bg-medmile-blue-dark">Jetzt kostenlos registrieren</a>
+      <p class="mt-2 text-sm text-gray-600">Die ersten Kurse kostenlos entdecken – für CME-Punkte ist eine Lizenz erforderlich.</p>
+    </div>
+  </section>
+
+  <!-- Vorteile Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-6">
+        <h3 class="text-3xl font-bold text-medmile-blue">Warum MedMile?</h3>
+        <ul class="space-y-4">
+          <li><strong>Flexibilität:</strong> Lernen Sie jederzeit und überall.</li>
+          <li><strong>Zertifiziert:</strong> Erhalten Sie CME-Punkte für Ihre Weiterbildung.</li>
+          <li><strong>Praxisnah:</strong> Inhalte von erfahrenen Expert*innen.</li>
+          <li><strong>Kosteneffizient:</strong> Sparen Sie Reise- und Übernachtungskosten.</li>
+        </ul>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1588776814546-bacb5c01f6b6?auto=format&fit=crop&w=800&q=80" alt="Arzt am Laptop" class="rounded-lg shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Kliniken Logos (statisch, 4x2 Grid) -->
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold text-medmile-blue mb-10">Diese Kliniken setzen auf MedMile</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+        <img src="/mnt/data/Universitätsklinikum Hamburg-Eppendorf.png" alt="UKE" class="h-16 mx-auto">
+        <img src="/mnt/data/Universitätsklinikum Köln.png" alt="Uniklinik Köln" class="h-16 mx-auto">
+        <img src="/mnt/data/Universitätsklinikum Leipzig.png" alt="Uniklinik Leipzig" class="h-16 mx-auto">
+        <img src="/mnt/data/Kern_DM_Logoblock_zweiz_RGB.png" alt="Kernspinzentren" class="h-16 mx-auto">
+        <img src="/mnt/data/Klinikum Nürnberg.png" alt="Klinikum Nürnberg" class="h-16 mx-auto">
+        <img src="/mnt/data/Logo_DRG_li_mS_CMYK.jpg" alt="Deutsche Röntgengesellschaft" class="h-16 mx-auto">
+        <img src="/mnt/data/logo-dieradionauten.png" alt="Die Radionauten" class="h-16 mx-auto">
+        <img src="/mnt/data/Universitätsklinikum Bonn.png" alt="Uniklinik Bonn" class="h-16 mx-auto">
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-100 py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="max-w-3xl mx-auto space-y-8">
+        <blockquote class="bg-white p-6 rounded-lg shadow">
+          <p class="text-lg italic">„Mit MedMile kann ich mich schnell und effizient fortbilden – genau das, was ich im stressigen Klinikalltag brauche.“</p>
+          <footer class="mt-4 font-semibold">Dr. med. Julia Weber, Kardiologin</footer>
+        </blockquote>
+        <blockquote class="bg-white p-6 rounded-lg shadow">
+          <p class="text-lg italic">„Die praxisnahen Inhalte und die einfache Bedienung machen MedMile für mein ganzes Team zur ersten Wahl.“</p>
+          <footer class="mt-4 font-semibold">Dr. med. Tobias Kranz, Radiologe</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kurs Preview Section -->
+  <section class="py-16 bg-white" id="kurse">
+    <div class="max-w-5xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-medmile-blue mb-8 text-center">Kursvorschau: Künstliche Intelligenz in der Radiologie</h3>
+      <div class="bg-gray-100 rounded-lg shadow p-6 md:flex items-center">
+        <div class="md:w-1/2">
+          <iframe class="w-full aspect-video rounded" src="https://www.youtube.com/embed/5qap5aO4i9A" title="Kursvorschau" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0">
+          <p class="text-lg mb-4">Erhalten Sie einen Einblick in unsere Qualifikation zur KI-gestützten Diagnostik. Lernen Sie praxisnah, wie KI Ihre Bildgebung unterstützt.</p>
+          <a href="#" class="inline-block bg-medmile-blue text-white px-5 py-2 rounded hover:bg-medmile-blue-dark">Kurs entdecken</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Referenten Slider -->
+  <section class="py-16 bg-blue-50" id="referenten">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-medmile-blue mb-8 text-center">Unsere Referent*innen</h3>
+      <div class="overflow-hidden relative">
+        <div class="flex space-x-8 animate-[scroll_30s_linear_infinite]">
+          <a href="/referenten/dr-anna-mueller" class="flex-none w-48 text-center">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-full mx-auto mb-4 h-32 w-32 object-cover shadow-lg" alt="Dr. Anna Müller">
+            <div class="font-semibold">Dr. Anna Müller</div>
+            <div class="text-sm text-gray-500">Radiologie</div>
+          </a>
+          <a href="/referenten/prof-max-becker" class="flex-none w-48 text-center">
+            <img src="https://randomuser.me/api/portraits/men/46.jpg" class="rounded-full mx-auto mb-4 h-32 w-32 object-cover shadow-lg" alt="Prof. Max Becker">
+            <div class="font-semibold">Prof. Max Becker</div>
+            <div class="text-sm text-gray-500">Kardiologie</div>
+          </a>
+          <a href="/referenten/dr-lisa-koenig" class="flex-none w-48 text-center">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-full mx-auto mb-4 h-32 w-32 object-cover shadow-lg" alt="Dr. Lisa König">
+            <div class="font-semibold">Dr. Lisa König</div>
+            <div class="text-sm text-gray-500">Med. KI</div>
+          </a>
+          <a href="/referenten/dr-jens-keller" class="flex-none w-48 text-center">
+            <img src="https://randomuser.me/api/portraits/men/22.jpg" class="rounded-full mx-auto mb-4 h-32 w-32 object-cover shadow-lg" alt="Dr. Jens Keller">
+            <div class="font-semibold">Dr. Jens Keller</div>
+            <div class="text-sm text-gray-500">Innere Medizin</div>
+          </a>
+          <a href="/referenten/dr-sophie-martens" class="flex-none w-48 text-center">
+            <img src="https://randomuser.me/api/portraits/women/29.jpg" class="rounded-full mx-auto mb-4 h-32 w-32 object-cover shadow-lg" alt="Dr. Sophie Martens">
+            <div class="font-semibold">Dr. Sophie Martens</div>
+            <div class="text-sm text-gray-500">Gynäkologie</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
